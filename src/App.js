@@ -1,27 +1,29 @@
 import React from 'react';
 import './App.css';
 import ScratchCard from 'react-scratchcard';
-import image from './assets/background.jpg'
-import winnerImage from './assets/result.jpg'
+import scratch from './assets/NonScratch.png'
+
 
 function App() {
   const settings = {
-    width: 350,
-    height: 350,
-    image: image,
-    finishPercent: 50,
+    width: '350px',
+    height: '400px',
+    image: scratch,
+    finishPercent: 60,
     onComplete: () => console.log('The card is now clear!')
   };
 
   return (
-    <div>
+    <div className='background-img'>
       <ScratchCard {...settings}>
-      <img src={winnerImage} alt="Winner" width={300} height={300} />
+        <div className='number'>
+          2 3 4 5 2
+        </div>
+      </ScratchCard>
 
-  </ScratchCard>;
-   
+
     </div>
-  );
+  )
 }
 
 export default App;
